@@ -1,0 +1,14 @@
+[build]
+  command = "yarn build"
+  publish = "build"
+
+[build.environment]
+  NODE_VERSION = "22"
+  YARN_VERSION = "1.22.22"
+  CI = "true"
+
+# Support client-side routing if routes are added later.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
